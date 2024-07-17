@@ -70,8 +70,8 @@ class Shadow:
         if self.element:
             if shadow_image:
                 self.shadow_photo = ImageTk.PhotoImage(shadow_image)
-                imageCanvas = self.canvas.create_image(int(self.coords[2] - self.coords[0]) / 2 + self.x,
-                                                       int(self.coords[3] - self.coords[1]) / 2 + self.y, image=self.shadow_photo)
+                imageCanvas = self.canvas.create_image(int(self.coords[2] - self.coords[0]) / 2 + self.x + self.coords[0],
+                                                       int(self.coords[3] - self.coords[1]) / 2 + self.y + self.coords[1], image=self.shadow_photo)
                 self.shadow_photo = self.shadow_photo
                 self.canvas.lift(self.element, imageCanvas)
 
@@ -154,11 +154,13 @@ if __name__ == "__main__":
     canvas.pack()
 
     oval = canvas.create_oval(5, 5, 55, 55, fill='red', outline='red')
-    # re = canvas.create_rectangle(5, 5, 60, 80, fill='red', outline='red')
+    re = canvas.create_rectangle(60, 60, 115, 135, fill='red', outline='red')
 
     # test = tk.Label(canvas, text="Hello World")
     # test.place(x=100, y=100)
     shadow = Shadow(oval, canvas, 5, 5, 5, "#000000")
     shadow.display()
+    shadow1 = Shadow(re, canvas, 5, 5, 5, "#000000")
+    shadow1.display()
 
     root.mainloop()
