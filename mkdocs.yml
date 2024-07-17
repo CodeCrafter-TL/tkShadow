@@ -255,5 +255,5 @@ nav: # 导航栏
           - 1.1 安装 tkShadow: tutorials/1-1.md
           - 1.2 认识 tkShadow: tutorials/1-2.md
       - 第二章：使用阴影:
-          - 2.1 使用控件阴影: tutorails/2-1.md
-          - 2.2 使用元素阴影: tutorails/2-2.md
+          - 2.1 使用控件阴影: tutorials/2-1.md
+          - 2.2 使用元素阴影: tutorials/2-2.md
